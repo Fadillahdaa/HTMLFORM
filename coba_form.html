@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <form action="/action_page.php" method="get" method="post" target="isi_self,_blank">
+    <form action="/action_page.php"  method="post" onsubmit="displayMessage()>
         <label for="depan">Nama Depan:</label><br>
         <input type="text" id="depan" name="i_name" value="isi nama depan anda"><br>
         <label for="n_belakang">Nama Belakang:</label><br>
@@ -15,6 +15,16 @@
         <input type="submit" value="Kirim">
         <input type="reset" value="Reset">
     </form>
+    <p id="result"></p>
+    <script>
+        function displayMessage() {
+            var depan = document.getElementById("depan").value;
+            var n_belakang = document.getElementById("n_belakang").value;
+            var message = "Terima kasih, " + depan + " " + n_belakang + ", formulir Anda telah berhasil dikirim!";
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+    
     <p>Jika Anda mengeklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php"</p>
     <p>Kesimpulan:</p>
 </body>
