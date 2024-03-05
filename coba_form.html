@@ -7,16 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <form action="/action_page.php" method="post" target="_self">
+    <form action="/action_page.php" method="get" target="_self">
         <label for="depan">Nama Depan:</label><br>
-        <input type="text" id="depan" name="i_name" value=""><br>
+        <input type="text" id="depan" name="i_name" value="isi nama depan anda"><br>
         <label for="n_belakang">Nama Belakang:</label><br>
-        <input type="text" id="n_belakang" name="i_belakang" value=""><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="isi nama belakang anda"><br>
         <input type="submit" value="Kirim">
         <input type="reset" value="Reset">
     </form> 
-    <p>Jika Anda mengeklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php"</p>
+
+    <form action="/action_page.php" method="post" target="_blank">
+        <label for="depan">Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="isi nama depan anda"><br>
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="isi nama belakang anda"><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form> 
+
+    <p>Jika Anda mengeklik tombol "Kirim" pada formulir pertama, data formulir akan dikirim ke halaman bernama "/action_page.php" dengan metode post dan dibuka di tab atau jendela baru. Jika Anda mengeklik tombol "Kirim" pada formulir kedua, data formulir akan dikirim ke halaman yang sama dengan metode get dan dibuka di frame atau jendela yang sama.</p>
     <p>Kesimpulan:</p>
-  
 </body>
 </html>
